@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration>
+    <properties resource="schema/mysql.properties"></properties>
+    <context id="mysqltables" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="${jdbc.url}" password="${jdbc.password}"
+                        userId="${jdbc.username}"
+        >
+        </jdbcConnection>
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false"></property>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="org,User.model" targetProject="src">
+            <property name="enableSubPackages" value="true"></property>
+            <property  name="trimStrings"  value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <property  name="enableSubPackages"  value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="User.dao" targetProject="src">
+            <property  name="enableSubPackages"  value="true"/>
+        </javaClientGenerator>
+
+
+
+
+        <table tableName="user"  domainObjectName="User" schema="User"
+               enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false"
+        >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"></generatedKey>
+        </table>
+
+        <table tableName="items"  domainObjectName="Item" schema="User"
+               enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false"
+        >
+
+        </table>
+
+        <table tableName="orderdetail"  domainObjectName="Orderdatail" schema="User"
+               enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false"
+        >
+            <generatedKey column="detailId" sqlStatement="MySql" identity="true"></generatedKey>
+        </table>
+        <table tableName="orders"  domainObjectName="Order" schema="User"
+               enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false"
+        >
+
+        </table>
+
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.User.mapper.ItemMapper">
+  <resultMap id="BaseResultMap" type="org.User.model.Item">
+
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="itemid" jdbcType="INTEGER" property="itemid" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="detail" jdbcType="LONGVARCHAR" property="detail" />
+  </resultMap>
+  <insert id="insert" parameterType="org.User.model.Item">
+
+    insert into items (name, price, itemid, 
+      createtime, pic, detail
+      )
+    values (#{name,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{itemid,jdbcType=INTEGER}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{pic,jdbcType=VARCHAR}, #{detail,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select name, price, itemid, createtime, pic, detail
+    from items
+  </select>
+</mapper>

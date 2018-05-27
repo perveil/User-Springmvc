@@ -1,0 +1,8 @@
+org\User\model\Item.class
+org\User\model\Orderdatail.class
+org\User\mapper\OrderdatailMapper.class
+org\User\model\Order.class
+org\User\model\User.class
+org\User\mapper\ItemMapper.class
+org\User\mapper\OrderMapper.class
+org\User\mapper\UserMapper.class

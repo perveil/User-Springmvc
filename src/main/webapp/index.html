@@ -1,0 +1,117 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Login</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<ul class="breadcrumb">
+				<li class="active">
+					<a href="#">DRESS&nbsp;MATCH</a> <span class="divider">/</span>
+				</li>
+				<li>Let us do something for our clothes</li>
+				<li class="header-right" >
+					<a href="#">login</a>
+				</li>
+				<li class="header-right">
+					<a href="#">register</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="content-Carousel">
+				<div class="carousel slide" data-ride="carousel" id="mycarousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/thegirl.jpg" />
+						</div>
+						<div class="item">
+							<img src="img/asd.jpg" />
+						</div>
+						<div class="item">
+							<img src="img/thebody.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap"></div>
+			<div class="content-tab">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#login" aria-controls="login" role="tab" data-toggle="tab">登录</a>
+					</li>
+					<li role="presentation">
+						<a href="#register" aria-controls="register" role="tab" data-toggle="tab">注册</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="login">
+						<div class="loginForm">
+							<form role="form" class="form-horizontal Form_login">
+								<div class="form-group">
+									<input type="text" class="Theinput" id="ID" placeholder="请输入手机号/邮箱">
+									<span class="help-block id-block"></span>
+								</div>
+								<div class="form-group 	group_exception" style="margin-top: 30px;">
+									<input type="password" class="Theinput" id="password" placeholder="请输入密码">
+									<span class="help-block password-block"></span>
+									<!--
+                                    	help-block里边可以写后台传输回来的数据，比如密码错误等
+                                    -->
+								</div>
+								<div class="UseTel">
+									<a href="#">使用手机验证码登陆 </a>
+								</div>
+								<div class="ForgetPass">
+									<a href="#">忘记密码？</a>
+								</div>
+                              <button type="button" value="登陆" class="btn btn-primary LoginBtn">登陆</button>
+							</form>
+						</div>
+
+					</div>
+					<div role="tabpanel" class="tab-pane" id="register">
+						<div class="registerForm">
+							<form role="form" class="form-horizontal Form_Register">
+								
+                                <div class="form-group ">
+									<input type="text" class="Theinput" id="RegisterID" placeholder="请输入手机号/邮箱">
+									<span class="help-block registerId-block"></span>
+								</div>
+								<div class="form-group group_exception">
+									<input type="password" class="Theinput" id="Registerpassword" placeholder="请输入密码">
+									<span class="help-block registerPassword-block"></span>
+								</div>
+								<div class="form-group group_exception" >
+									<input type="password" class="Theinput" id="RegisterDublepassword" placeholder="请确认密码">
+									<span class="help-block registerDublepassword-block"></span>
+								</div>
+								<input type="button" class="btn btn-primary RegisterBtn" value="注册"/>
+							</form>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="footer">
+			<p style="font-family: 'arial rounded mt bold';font-size: 12px;">如果你还在为自己的<em style="font-size: 15px">&nbsp;服装搭配&nbsp;</em>担忧就快来<a style="font-size: 15px" href="#">join</a>我们</p>
+			<p style="font-size: 12px;"><a href="">最新资讯</a></p>
+			<p style="font-size: 12px;"><a href="#">阅读我们的隐私和Cookie政策</a></p>
+			<p style="font-size: 12px;"><a href="#">关于&nbsp;DRESS MATCH</a></p>
+			
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/js.js" ></script>
+	</body>
+
+</html>
